@@ -1,0 +1,39 @@
+<html>
+        <head>
+		<title>Mahendra</title>
+	</head>
+	<body>
+        <script>
+
+        arr=[{fname:"Mahendra",lname:"Naik"},{fname:"Raghu",lname:"Naik"},
+                {fname:"ayush",lname:"Sharma"},
+                {fname:"Steve",lname:"smit"},
+                {fname:"Steve",lname:"smth"},
+                {fname:"Steve",lname:"mith"}];
+        //alert(arr);
+
+        function sr(a,b)
+        {       
+            a=a.fname.toUpperCase();   //to avoid upper lower case we can conver to any case so it gives correct output
+            b=b.fname.toUpperCase();  
+            if(a==b)            
+            {
+                return 0;
+            }
+            else if(a>b)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }          
+        }
+
+        arr.sort(sr);
+        //alert(arr);   
+        console.log(arr);
+
+        </script>
+	</body>
+</html>

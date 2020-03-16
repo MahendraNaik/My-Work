@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Mahendra</title>
+	</head>
+	
+	<body>
+		<script>
+
+            //factory design function
+
+            function user(bal,userName)
+            {                
+                return [
+                    function (a) 
+                    {
+                        bal=bal+a;
+                        alert("Amount Deposited "+a+"\nTotal amount of user "+userName+"\'s "+bal);
+                    },
+                    function (b)
+                    {
+                        if(b<bal)
+                        {
+                            bal=bal-b;
+                            alert("Amount withdrawed "+b+"\nRemaining amount of "+userName+"\'s "+bal);
+                        }
+                        else
+                        {
+                            alert("Insufficient amount")
+                        }
+                    },
+                    function ()
+                    {
+                        alert("Total amount of user "+userName+"\'s "+bal);
+                    }
+                ];
+            }      
+
+            h1=user(4000,"Mahendra");
+            console.log(h1)
+            h1[0](5000);
+            h1[1](1500);
+            h1[2]();
+
+            h2=user(15000,"Steve");
+            h2[0](5000);
+            h2[1](4500);
+            h2[2]();
+
+
+		</script>
+	</body>
+</html>

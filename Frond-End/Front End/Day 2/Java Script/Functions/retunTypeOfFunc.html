@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Mahendra</title>
+	</head>
+	
+	<body>
+		<script>
+            //return type function
+            function hi(i,j)
+            {
+                return("hello "+i+" and "+j);
+            }
+            c=hi("Ayush","Steve");
+            d=hi("Abhay","Adam");
+            alert(c+" "+typeof c);
+            alert(d+" "+typeof d);
+
+            function hello(i,j)
+            {
+                alert("hello "+i+" and "+j);
+            }
+            hello();//function will work but i and j are undefined
+            
+
+            function hel(i,j)
+            {
+                alert("hello "+i+" and "+j);
+            }
+            hel("Mahendra","Ayush","Steve");  //function will work but i and j will show in alert but steve will not dislplay
+            
+            //to get steve we use arguments array
+            function hel()
+            {
+                alert(arguments[0]);
+                alert(arguments[1]);
+                alert(arguments[1]);
+            }
+            he("Mahendra","Ayush","Steve");
+
+        </script>
+	</body>
+</html>

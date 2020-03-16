@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Mahendra</title>
+	</head>
+	
+	<body>
+		<script>
+            
+            
+            function outer()
+            {
+                var data="hello word"
+                function inner()
+                {
+                    alert("inner "+data); 
+                }
+                inner();      //   lescical scope : nested func can reed outer local variables  
+            }      
+            outer();    
+
+		</script>
+	</body>
+</html>

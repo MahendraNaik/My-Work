@@ -1,0 +1,233 @@
+<html>
+    <head>
+	    <title>Mahendra</title>
+	</head>
+	<body>
+        <script>
+
+       arr=[
+           {pid:1,pname:"Nokia",cost:12000,catagory:"Mobile",Disc:10,Ratings:4.5},
+           {pid:2,pname:"Samsung",cost:45000,catagory:"Mobile",Disc:15,Ratings:5},
+           {pid:3,pname:"Hp",cost:75000,catagory:"Laptop",Disc:5,Ratings:6}, 
+           {pid:4,pname:"Dell",cost:63000,catagory:"Laptop",Disc:24,Ratings:7},
+           {pid:5,pname:"Google",cost:72400,catagory:"Mobile",Disc:32,Ratings:9},
+           {pid:6,pname:"Apple",cost:95000,catagory:"Mobile",Disc:12,Ratings:8.5},
+           {pid:7,pname:"Puma",cost:2550,catagory:"Cloths",Disc:60,Ratings:6.4},
+           {pid:8,pname:"Nike",cost:3400,catagory:"Cloths",Disc:45,Ratings:5.2},
+           {pid:9,pname:"Lee",cost:1450,catagory:"Cloths",Disc:70,Ratings:3.5},
+           {pid:10,pname:"Lenovo",cost:84000,catagory:"Laptop",Disc:65,Ratings:6.1}
+        ];
+
+        console.log(arr);
+
+        function st(a,b)
+        {
+            if(typeof(a)=="string")
+            {
+                a=a.toUpperCase();
+                b=b.toUpperCase();
+                if(a==b)            
+                {
+                    return 0;
+                }
+                else if(a>b)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else if(typeof(a)=="number")
+            {
+                if(a==b)            
+                {
+                    return 0;
+                }
+                else if(a>b)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+
+        }
+
+        ch=Number(prompt("Order By\n1.Product Id\n2.Product Name\n3.Cost\n4.Catagory\n5.Ratings"));
+        
+        switch(ch)
+        {
+            case 1 : arr.sort(function (i,j)
+                        {         
+                            return st(i.pid,j.pid);
+                        }
+                     );
+                     console.log(arr);
+                     break;
+
+            case 2 : arr.sort(function (i,j)
+                        {         
+                            return st(i.pname,j.pname);
+                        }
+                     );
+                     console.log(arr);
+                     break;
+
+            case 3 : arr.sort(function (i,j)
+                        {         
+                            return st(i.cost,j.cost);
+                        }
+                     );
+                     console.log(arr);
+                     break;
+            
+            case 4 : arr.sort(function (i,j)
+                        {         
+                            return st(i.catagory,j.catagory);
+                        }
+                     );
+                     console.log(arr);
+                     break;
+
+            case 5 : arr.sort(function (i,j)
+                        {         
+                            return st(i.Ratings,j.Ratings);
+                        }
+                     );
+                     console.log(arr);
+                     break;
+                
+            default : alert("Invalid");
+                    break;
+        }
+
+
+        // or
+        
+        
+        /*
+        ch=Number(prompt("Order By\n1.Product Id\n2.Product Name\n3.Cost\n4.Catagory\n5.Ratings"));
+        switch(ch)
+        {
+            case 1 : ar.sort(function (a,b)
+                        {       
+                            a=a.pid;
+                            b=b.pid;
+                            if(a==b)            
+                            {
+                                return 0;
+                            }
+                            else if(a>b)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -1;
+                            }
+
+                        }
+                        );
+                    console.log(ar);
+                    break;
+
+            case 2 : arr.sort(function (a,b)
+                        {       
+                            a=a.pname.toUpperCase();
+                            b=b.pname.toUpperCase();
+                            if(a==b)            
+                            {
+                                return 0;
+                            }
+                            else if(a>b)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -1;
+                            }
+
+                        }
+                        );
+                    console.log(arr);
+                    break;
+
+            case 3 : arr.sort(function (a,b)
+                        {       
+                            a=a.Ratings;
+                            b=b.Ratings;
+                            if(a==b)            
+                            {
+                                return 0;
+                            }
+                            else if(a>b)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -1;
+                            }
+
+                        }
+                        );
+                    console.log(arr);
+                    break;
+            
+            case 4 : arr.sort(function (a,b)
+                        {       
+                            a=a.catagory.toUpperCase();
+                            b=b.catagory.toUpperCase();
+                            if(a==b)            
+                            {
+                                return 0;
+                            }
+                            else if(a>b)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -1;
+                            }
+
+                        }
+                        );
+                    console.log(arr);
+                    break;
+
+            case 5 : arr.sort(function (a,b)
+                        {       
+                            a=a.cost;
+                            b=b.cost;
+                            if(a==b)            
+                            {
+                                return 0;
+                            }
+                            else if(a>b)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -1;
+                            }
+
+                        }
+                        );
+                    console.log(arr);
+                    break;
+                
+            default : alert("Invalid");
+                    break;
+        }
+        */    
+
+        </script>
+	</body>
+</html>

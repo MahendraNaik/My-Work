@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Mahendra</title>
+	</head>
+	
+	<body>
+		<script>
+
+            function user(bal,userName)
+            {
+                
+                function deposit(a) 
+                {
+                    bal=bal+a;
+                    alert("Amount Deposited "+a+"\nTotal amount of user "+userName+"\'s "+bal);
+                }
+                function withdarw(b)
+                {
+                    if(b<bal)
+                    {
+                        bal=bal-b;
+                        alert("Amount withdrawed "+b+"\nRemaining amount of "+userName+"\'s "+bal);
+                    }
+                    else
+                    {
+                        alert("Insufficient amount")
+                    }
+                }
+                function show()
+                {
+                    alert("Total amount of user "+userName+"\'s "+bal);
+                }
+                
+                function transfer(tr,us)
+                {
+                    if(tr<bal)
+                    {
+                        alert(userName+" transfered amount "+tr);
+                        bal=bal-tr;
+                        us[0](tr);
+                    }
+                    else
+                    {
+                        alert("insufficient bal");
+                    }
+                }
+
+                var fun= [deposit,withdarw,show,transfer];
+                return fun;
+            }      
+           
+            h1=user(10000,"Mahendra");
+            h1[0](5000);
+            h1[1](4500);
+            h1[2];
+
+            h2=user(15000,"Steve");
+            h2[0](5000);
+            h2[1](4500);
+            h2[2]();
+            h2[3](1500,h1)
+
+            h1[2]();
+            h2[2]();
+
+		</script>
+	</body>
+</html>

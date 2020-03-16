@@ -1,0 +1,31 @@
+<html>
+	<head>
+        <title>Mahendra</title>
+
+        <script>
+            function demo(a)
+            {
+                var b=document.getElementsByTagName("h1");
+                for(var i=0;i<b.length;i++)
+                {
+                    b[i].style.color="Black";
+                    b[i].style.backgroundColor="White";
+                    b[i].style.textDecoration="none";
+                }
+                
+                a.style.color="Blue";
+                a.style.backgroundColor="Yellow";
+                a.style.textDecoration="underline"; 
+            }
+
+        </script>
+        
+    </head>
+
+	<body>
+        <h1 id="a1" onclick="demo(this)" >Hi Mahendra</h1>
+        <h1 id="a2" onclick="demo(this)" >Hi Ayush</h1>
+        <h1 id="a3" onclick="demo(this)" >Hi Steve</h1>
+        <h1 id="a4" onclick="demo(this)" >Hi Adam</h1>
+    </body>
+</html>

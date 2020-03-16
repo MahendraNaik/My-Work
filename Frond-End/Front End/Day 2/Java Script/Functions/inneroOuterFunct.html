@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Mahendra</title>
+	</head>
+	
+	<body>
+		<script>
+            
+            function outer(name)
+            {
+                alert("outer Function");
+                function inner()
+               {
+                   alert("inner Function");
+               }
+               inner() // it will work
+            }
+            outer();
+            inner(); //not allowed outside the outer function           
+
+		</script>
+	</body>
+</html>

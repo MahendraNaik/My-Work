@@ -1,0 +1,36 @@
+<html>
+	<head>
+        <title>Mahendra</title>
+
+        <script>
+            window.onload=function()
+            {
+                var bt=document.getElementsByClassName("demo");
+                {
+                    for(var i=0;i<bt.length;i++)
+                    {
+                        bt[i].addEventListener("click",function ()
+                                {
+                                    for(var j=0;j<bt.length;j++)
+                                    {
+                                        bt[j].style.color="black";
+                                        bt[j].style.backgroundColor="White";
+                                    }
+                                    this.style.color="blue";
+                                    this.style.backgroundColor="gray";
+                                })
+                    }
+                }
+            }               
+        </script>
+        
+    </head>
+
+	<body>
+        <h1 class="demo">Hi Mahendra</h1>
+        <h1 class="demo">Hi Ayush</h1>
+        <h1 class="demo">Hi Steve</h1>
+        <h1 class="demo">Hi Adam</h1>
+        <h1 class="demo">Hi Naik</h1>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+	<title>Mahendra</title>
+	</head>
+	<body>
+        <script>
+
+        arr=[   {team:"India",fname:"Mahendra",lname:"Naik"},
+                {team:"India",fname:"Raghu",lname:"Naik"},
+                {team:"India",fname:"ayush",lname:"Sharma"},
+                {team:"Australia",fname:"Steve",lname:"smith"},
+                {team:"Australia",fname:"Maxwell",lname:"dom"},
+                {team:"Australia",fname:"Adam",lname:"clone"}
+                
+            ];
+
+        function demo(tm)
+        {       
+            return tm.team=="India";
+        }
+
+        newarr=arr.filter(demo);
+        console.log(newarr);
+
+        </script>
+	</body>
+</html>
